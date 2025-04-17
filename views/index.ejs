@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure-Auth</title>
+</head>
+<link rel="stylesheet" href="/stylesheets/index.css">
+
+<body>
+  <div class="container">
+    <div class="content">
+      <p class="header">Login here to see more</p>
+
+      <form action="/loggedin" method="post">
+
+        <input name="username" type="text" placeholder="Username" class="detail" /><br />
+        <input name="password" type="password" placeholder="Password" class="detail" />
+
+        <% if (error.length > 0) { %>
+          <p class="error"> "<%= error %>" </p>
+        <% } %>
+
+        <button class="btn int">Log in</button>
+
+      </form>
+      <p class="or">OR</p>
+
+      <footer>
+        <br><hr />
+        <p>Don't have an account?</p>
+        <a href="/register"> Register</a>
+      </footer>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

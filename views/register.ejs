@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure-Auth</title>
+</head>
+<link rel="stylesheet" href="/stylesheets/register.css">
+
+<body>
+  <div class="container">
+    <form id="register-form" action="/registered" method="post">
+      <div class="content">
+        
+        <p class="header">Create account to see more</p>
+
+        <% if (error.length > 0) { %>
+          <p class="error"> "<%= error %>" </p>
+        <% } %>
+
+        <input name="username" type="text" placeholder="Username*" class="detail" required /><br />
+        <input name="password" type="password" placeholder="Password*" class="detail" required />
+
+        
+        <select name="gender" class="detail" required>
+          <option value="" disabled selected>Select Gender*</option>
+          <option value="male">male</option>
+          <option value="female">female</option>
+        </select>       
+        <input name="email" type="email" placeholder="Email*" class="detail" required /><br />
+        <input name="fullname" type="text" placeholder="Fullname*" class="detail" required /><br />
+        <input name="profession" type="text" class="detail" id="profession" placeholder="Enter your profession" ><br />
+        <input name="hobby" type="text" class="detail" id="hobby" placeholder="Enter your hobby" ><br />
+        <input name="linkedin" type="text" class="detail" id="linkedin" placeholder="Enter your linkedin profile link" ><br />
+        <input name="github" type="text" class="detail" id="github" placeholder="Enter your github profile link" ><br />
+        <input name="twitter" type="text" class="detail" id="twitter" placeholder="Enter your twitter profile link" ><br />
+        
+
+
+        <!-- <a href="/forgot">Forgot your password?</a> -->
+
+        <button class="btn int">Register</button>
+
+        <p class="or">OR</p>
+        <!-- <button class="btn fbk">
+          <i class="fab fa-facebook fa-lg" style="color: white; padding-right: 10px"></i><a href="#">Continue with
+            Facebook</a></button><br />
+        <button class="btn ggl">
+          <i class="fab fa-google" style="color: rgb(11, 241, 22); padding-right: 10px"></i><a href="#">Continue with
+            Google</a>
+        </button> -->
+
+        <footer>
+          <br>
+          <hr />
+          <p>Already have a account?</p>
+          <a href="/"> Login</a>
+        </footer>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
